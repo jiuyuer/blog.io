@@ -4,9 +4,23 @@
   <meta charset=utf-8>
   <title>webcjs</title>
   <style type="text/css">
-    body {
+    * {
       margin: 0;
       padding: 0;
+    }
+
+    body {
+      font: 16px/1.8 "Lato", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", arial, sans-serif;
+      color: #333;
+    }
+
+    ::selection {
+      background: #222;
+      color: white;
+    }
+
+    a {
+      color: #333;
     }
 
     .profile {
@@ -42,27 +56,46 @@
       margin: 1rem 4rem
     }
 
-    ul.pro_list {
-      position: fixed;
-      left: 0;
-      bottom: 0;
+    .menu {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
     }
 
-    .profile__container ul li {
-      text-align: left;
+    .menu a {
+      display: inline-block;
+      position: relative;
+      margin-left: 10px;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu a:hover {
+      border-bottom: 1px solid #333;
+    }
+
+    .menu a:active {
+      top: 1px !important;
+    }
+
+    .menu a:first-child {
+      margin-left: 0;
     }
   </style>
 </head>
 
 <body>
-  <ul class="pro_list">
-    <li></li>
-  </ul>
   <section class="profile">
     <div class="profile__container">
       <img class="profile__avatar" src="https://avatars2.githubusercontent.com/u/6263815?s=460&v=4">
       <h1 class="profile__name">Mi Tu</h1>
       <blockquote class="profile__description">A Web developer who loves to Reading and photography</blockquote>
+      <div class="menu">
+        <a href="https://github.com/jiuyuer">GitHub</a>
+        <a href="https://jiuyuer.github.io">Blog</a>
+        <a href="https://webcjs.tuchong.com">Photos</a>
+        <a href="https://weibo.com/newselement">WeiBo</a>
+      </div>
     </div>
   </section>
 </body>
