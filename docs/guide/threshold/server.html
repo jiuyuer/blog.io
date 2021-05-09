@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>与后台交互 | TinyWeb</title>
+    <meta name="description" content="基于Vue2.0，配合使用VUX(H5)、ElementUI(PC)等组件库的一个前端集成解决方案">
+    
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.9ea05ce0.css" as="style"><link rel="preload" href="/docs/assets/js/app.3bdf8258.js" as="script"><link rel="preload" href="/docs/assets/js/15.d3110967.js" as="script"><link rel="prefetch" href="/docs/assets/js/4.e3c42409.js"><link rel="prefetch" href="/docs/assets/js/2.64db4bff.js"><link rel="prefetch" href="/docs/assets/js/3.3b0b2e65.js"><link rel="prefetch" href="/docs/assets/js/5.03998fab.js"><link rel="prefetch" href="/docs/assets/js/6.2de7b70e.js"><link rel="prefetch" href="/docs/assets/js/7.3e108eb6.js"><link rel="prefetch" href="/docs/assets/js/8.0e4a0115.js"><link rel="prefetch" href="/docs/assets/js/9.5b6a948c.js"><link rel="prefetch" href="/docs/assets/js/10.5ccc073c.js"><link rel="prefetch" href="/docs/assets/js/11.6d4266ca.js"><link rel="prefetch" href="/docs/assets/js/12.301448b0.js"><link rel="prefetch" href="/docs/assets/js/13.3157abc8.js"><link rel="prefetch" href="/docs/assets/js/14.923e7bdb.js"><link rel="prefetch" href="/docs/assets/js/16.dad79a11.js"><link rel="prefetch" href="/docs/assets/js/17.83af5169.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.9ea05ce0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><!----> <span class="site-name">TinyWeb</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">首页</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="http://www.mtiny.cn/tiny/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  杭州长亮
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">首页</a></div><div class="nav-item"><a href="/docs/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="http://www.mtiny.cn/tiny/index.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  杭州长亮
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>入门</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/docs/guide/" class="sidebar-link">介绍</a></li><li><a href="/docs/guide/threshold/start.html" class="sidebar-link">开始</a></li><li><a href="/docs/guide/threshold/layout.html" class="sidebar-link">布局</a></li><li><a href="/docs/guide/threshold/router-and-nav.html" class="sidebar-link">路由和侧边栏</a></li><li><a href="/docs/guide/threshold/permission.html" class="sidebar-link">权限验证</a></li><li><a href="/docs/guide/threshold/new-page.html" class="sidebar-link">新增页面</a></li><li><a href="/docs/guide/threshold/style.html" class="sidebar-link">样式</a></li><li><a href="/docs/guide/threshold/server.html" class="active sidebar-link">与后台交互</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/guide/threshold/server.html#前端请求流程" class="sidebar-link">前端请求流程</a></li><li class="sidebar-sub-header"><a href="/docs/guide/threshold/server.html#request-js" class="sidebar-link">request.js</a></li><li class="sidebar-sub-header"><a href="/docs/guide/threshold/server.html#例子" class="sidebar-link">例子</a></li><li class="sidebar-sub-header"><a href="/docs/guide/threshold/server.html#mock-data" class="sidebar-link">Mock Data</a></li></ul></li><li><a href="/docs/guide/threshold/deploy.html" class="sidebar-link">构建和发布</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/docs/guide/advanced/" class="sidebar-link">建设中。。。</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>其他</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/docs/guide/other/" class="sidebar-link">培训文档</a></li><li><a href="/docs/guide/other/about.html" class="sidebar-link">关于</a></li><li><a href="/docs/guide/other/contact.html" class="sidebar-link">联系</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="与后台交互"><a href="#与后台交互" aria-hidden="true" class="header-anchor">#</a> 与后台交互</h1> <h2 id="前端请求流程"><a href="#前端请求流程" aria-hidden="true" class="header-anchor">#</a> 前端请求流程</h2> <p>一个完整的前端 UI 交互到服务端处理流程是这样的：</p> <ol><li>UI 组件交互操作；</li> <li>调用统一管理的 api service 请求函数；</li> <li>使用封装的 request.js 发送请求；</li> <li>获取服务端数据返回；</li> <li>更新 data；</li></ol> <p>从上面的流程可以看出，为了方便管理维护，统一的请求处理都放在 <code>@/src/api</code> 文件夹中，并且一般按照 model 纬度进行拆分文件，如：</p> <div class="language- extra-class"><pre class="language-text"><code>api/
+  login.js
+  article.js
+  remoteSearch.js
+  ...
+</code></pre></div><h2 id="request-js"><a href="#request-js" aria-hidden="true" class="header-anchor">#</a> request.js</h2> <p>其中，<code>@/src/utils/request.js</code> 是基于 <a href="https://github.com/axios/axios" target="_blank" rel="noopener noreferrer">axios<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 的封装，便于统一处理 POST，GET 等请求参数，请求头，以及错误提示信息等。它封装了全局 <code>request拦截器</code>、<code>respone拦截器</code>、<code>统一的错误处理</code>、<code>统一做了超时处理</code>、<code>baseURL设置等</code>。</p> <h2 id="例子"><a href="#例子" aria-hidden="true" class="header-anchor">#</a> 例子</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// api/article.js</span>
+<span class="token keyword">import</span> request <span class="token keyword">from</span> <span class="token string">'../utils/request'</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">fetchList</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token punctuation">:</span> <span class="token string">'/article/list'</span><span class="token punctuation">,</span>
+    method<span class="token punctuation">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span>
+    params<span class="token punctuation">:</span> query
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token comment">// views/articleList</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> fetchList <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/api/article'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    list<span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    listLoading<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>listLoading <span class="token operator">=</span> <span class="token boolean">true</span>
+      <span class="token function">fetchList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>response <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>list <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>items
+        <span class="token keyword">this</span><span class="token punctuation">.</span>listLoading <span class="token operator">=</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="mock-data"><a href="#mock-data" aria-hidden="true" class="header-anchor">#</a> Mock Data</h2> <p><strong><a href="https://www.easy-mock.com" target="_blank" rel="noopener noreferrer">easy-mock<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></strong> 了解一下！</p> <p>使用 easy-mock 来模拟数据。 它是一个纯前端可视化，并且能快速生成模拟数据的持久化服务。非常的简单易用还能结合 swagger，支持跨域 ，不管团队还是个人项目都值得一试。</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/docs/guide/threshold/style.html" class="prev">
+          样式
+        </a></span> <span class="next"><a href="/docs/guide/threshold/deploy.html">
+          构建和发布
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/docs/assets/js/15.d3110967.js" defer></script><script src="/docs/assets/js/app.3bdf8258.js" defer></script>
+  </body>
+</html>
